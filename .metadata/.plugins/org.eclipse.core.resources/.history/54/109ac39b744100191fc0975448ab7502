@@ -1,0 +1,10 @@
+import org.testng.annotations.Test;
+
+public class TestScenario2 {
+
+	@Test
+	public void Testscenario2(){
+		
+		System.out.println("second Testcase succesful");
+	}
+}

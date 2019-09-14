@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="customListeners.TestListeners"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test name="Test Scenario 1">
+    <classes>
+      <class name="TestSuite1.TestScenario1"/>
+    </classes>
+  </test> <!-- Test Scenario 1 -->
+  <test name="Test Scenario 2S">
+    <classes>
+      <class name="TestSuite1.TestScenario2"/>
+    </classes>
+  </test> <!-- Test Scenario 2S -->
+  <test name="Test Scenario 1(failed)">
+    <classes>
+      <class name="TestSuite1.TestScenario1">
+        <methods>
+          <include name="doReg"/>
+          <include name="title"/>
+        </methods>
+      </class> <!-- TestSuite1.TestScenario1 -->
+    </classes>
+  </test> <!-- Test Scenario 1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

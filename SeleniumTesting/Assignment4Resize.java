@@ -1,0 +1,36 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Assignment4Resize {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.google.com");
+		int x = 424;
+		int y = 345;
+		driver.manage().window().setSize(new Dimension(x,y));
+		int count = 0;
+		while(count<10){
+			driver.manage().window().setSize(new Dimension(x+100,y+100));	
+			
+			count++;
+			System.out.println(count);
+			Thread.sleep(5000);
+		}
+		
+		
+		
+		
+		/*Actions action = new Actions(driver);
+		WebElement window = driver.findElement(By.xpath("//*[@id='gsr']"));
+		
+		action.dragAndDropBy(window, 1025, 984).perform(); */
+
+	}
+
+}

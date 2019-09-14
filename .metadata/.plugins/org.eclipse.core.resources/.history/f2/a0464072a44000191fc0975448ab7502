@@ -1,0 +1,27 @@
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class TestScenario1 {
+
+	@Test(priority=2)
+	public void  dologin(){
+		
+		System.out.println("Login succesful");
+		Assert.
+	}
+	
+	@Test(priority=1)
+	public void doReg(){
+		
+		System.out.println("Registration succesful");
+	}
+	
+	@Test
+	public void title(){
+		
+		String expected_title = "gmail.com";
+		String actual_title = "yahoo.com";
+		
+		Assert.assertEquals(expected_title, actual_title);
+	}
+}

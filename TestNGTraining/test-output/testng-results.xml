@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" total="4" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="98" started-at="2019-03-11T06:37:27Z" finished-at="2019-03-11T06:37:27Z">
+    <groups>
+      <group name="stress">
+        <method signature="TestScenario2.Testscenario2()[pri:0, instance:TestSuite1.TestScenario2@13c78c0b]" name="Testscenario2" class="TestSuite1.TestScenario2"/>
+      </group> <!-- stress -->
+      <group name="functional">
+        <method signature="TestScenario1.title()[pri:3, instance:TestSuite1.TestScenario1@6b143ee9]" name="title" class="TestSuite1.TestScenario1"/>
+      </group> <!-- functional -->
+      <group name="ui">
+        <method signature="TestScenario1.doReg()[pri:1, instance:TestSuite1.TestScenario1@6b143ee9]" name="doReg" class="TestSuite1.TestScenario1"/>
+        <method signature="TestScenario1.dologin()[pri:2, instance:TestSuite1.TestScenario1@6b143ee9]" name="dologin" class="TestSuite1.TestScenario1"/>
+      </group> <!-- ui -->
+    </groups>
+    <test name="Test Scenario 1" duration-ms="69" started-at="2019-03-11T06:37:27Z" finished-at="2019-03-11T06:37:27Z">
+      <class name="TestSuite1.TestScenario1">
+        <test-method status="FAIL" signature="doReg()[pri:1, instance:TestSuite1.TestScenario1@6b143ee9]" name="doReg" duration-ms="25" started-at="2019-03-11T12:07:27Z" finished-at="2019-03-11T12:07:27Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.fail(Assert.java:101)
+	at TestSuite1.TestScenario1.doReg(TestScenario1.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doReg -->
+        <test-method status="PASS" signature="dologin()[pri:2, instance:TestSuite1.TestScenario1@6b143ee9]" name="dologin" duration-ms="1" started-at="2019-03-11T12:07:27Z" depends-on-methods="TestSuite1.TestScenario1.doReg" finished-at="2019-03-11T12:07:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dologin -->
+        <test-method status="FAIL" signature="title()[pri:3, instance:TestSuite1.TestScenario1@6b143ee9]" name="title" duration-ms="8" started-at="2019-03-11T12:07:27Z" finished-at="2019-03-11T12:07:27Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+	expected [yahoo.com] but found [gmail.com],
+	expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+	expected [yahoo.com] but found [gmail.com],
+	expected [false] but found [true]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at TestSuite1.TestScenario1.title(TestScenario1.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- title -->
+      </class> <!-- TestSuite1.TestScenario1 -->
+    </test> <!-- Test Scenario 1 -->
+    <test name="Test Scenario 2S" duration-ms="3" started-at="2019-03-11T06:37:27Z" finished-at="2019-03-11T06:37:27Z">
+      <class name="TestSuite1.TestScenario2">
+        <test-method status="PASS" signature="Testscenario2()[pri:0, instance:TestSuite1.TestScenario2@13c78c0b]" name="Testscenario2" duration-ms="1" started-at="2019-03-11T12:07:27Z" finished-at="2019-03-11T12:07:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Testscenario2 -->
+      </class> <!-- TestSuite1.TestScenario2 -->
+    </test> <!-- Test Scenario 2S -->
+  </suite> <!-- Suite -->
+</testng-results>

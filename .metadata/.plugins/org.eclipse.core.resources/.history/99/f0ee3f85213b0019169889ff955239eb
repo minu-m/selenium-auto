@@ -1,0 +1,61 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Assignment3 {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://timesofindia.indiatimes.com/poll.cms");
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+	    String captcha = driver.findElement(By.xpath("//*[@id='mathq2']")).getText();
+	    
+	    String strArray[] = captcha.split(" ");
+		System.out.println(strArray[0]);
+		
+		int a = Integer.parseInt(strArray[0]);
+		int b = Integer.parseInt(strArray[2]);
+		int c = 0;
+		
+		System.out.println("Operator = " +strArray[1]);
+		
+		try{
+		
+		if(strArray[1]=="+"){
+			
+			c = a + b;
+			System.out.println("Answer : " +c);	
+		}
+		
+		else if(strArray[1]=="-"){
+			
+			c = a - b;
+			System.out.println("Answer : " +c);	
+			
+		}
+		
+		else if(strArray[1]=="X"){
+			
+			c = a*b;
+			System.out.println("Answer : " +c);	
+		}
+			
+		
+		}
+		
+		catch(Exception e){
+			System.out.println("Error : " + e.getMessage());
+		}
+		
+		
+		
+		
+
+	}
+
+}
